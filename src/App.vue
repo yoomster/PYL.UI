@@ -11,7 +11,7 @@
             :type="showPassword ? 'text' : 'password'"
             label="Wachtwoord"
             prepend-icon="mdi-lock"
-            append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showPassword = !showPassword"
           />
         </v-form>
@@ -27,5 +27,8 @@
 </template>
 
 <script lang="ts" setup>
-const showPassword = false;
+import { ref } from 'vue'
+
+const showPassword = ref(false) 
 </script>
+
